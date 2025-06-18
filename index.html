@@ -1,39 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Float Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Monitoring & Alerting</title>
   <style>
-    .float-container {
-      border: 1px solid #ccc;
-      padding: 10px;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
-    .float-left {
-      float: left;
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em 0;
+      text-align: center;
     }
 
-    .float-right {
-      float: right;
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
     }
 
-    .clearfix::after {
-      content: "";
-      display: table;
-      clear: both;
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #333;
+      color: white;
+      margin-top: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
     }
   </style>
 </head>
 <body>
 
-  <div class="float-container clearfix">
-    <a href="#" class="float-left">Home</a>
-    <a href="#" class="float-right">Contact</a>
-    <p style="text-align: center;">Welcome to our website!</p>
-  </div>
+  <header>
+    <h1>Cloud Monitoring & Alerting</h1>
+    <p>Supporting the move from on-premise to the cloud</p>
+  </header>
 
-  <p> This current website is under construction as I try to understand github, commands, and VS code all together.</p>
-  <p> We are going to keep going with it now!</p>
-  <p> Git is very nice</p>
+  <nav>
+    <a href="#monitoring">Monitoring</a>
+    <a href="#alerting">Alerting</a>
+    <a href="#reporting">Reporting</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section id="monitoring">
+    <h2>Monitoring Overview</h2>
+    <p>As part of our cloud migration, we've implemented monitoring to ensure system performance, security, and availability.</p>
+    <ul>
+      <li><strong>Tools used:</strong> AWS CloudWatch, Azure Monitor, Datadog</li>
+      <li><strong>Monitored Resources:</strong> EC2, RDS, S3, network traffic</li>
+      <li><strong>Frequency:</strong> Metrics collected every 1–5 minutes</li>
+      <li><strong>Testing:</strong> Alerts can be tested using load generators or fault injection</li>
+      <li><strong>Adjustments:</strong> Thresholds reviewed monthly; config stored in Git</li>
+    </ul>
+  </section>
+
+  <section id="alerting">
+    <h2>Alerting & Notifications</h2>
+    <p>Alerts notify the right teams when an issue is detected. Alerts are tiered by severity:</p>
+    <ul>
+      <li><strong>Critical:</strong> Immediate pager alert via PagerDuty</li>
+      <li><strong>Warning:</strong> Slack + email to the ops channel</li>
+      <li><strong>Info:</strong> Logged in dashboard only</li>
+    </ul>
+    <p>Notification channels include: Slack, PagerDuty, and email groups.</p>
+  </section>
+
+  <section id="reporting">
+    <h2>Reporting</h2>
+    <p>Cloud activity and performance reports help us track trends and ensure compliance.</p>
+    <ul>
+      <li>Daily dashboard in Datadog with uptime and latency trends</li>
+      <li>Weekly email summary via AWS SNS + Lambda</li>
+      <li>Custom reports can be scheduled via PowerBI or emailed on demand</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <ul>
+      <li><strong>How do I subscribe to alerts?</strong> Contact ops@company.com or request access via internal portal</li>
+      <li><strong>Can I pause alerts?</strong> Yes, alerts can be silenced via the alert dashboard for maintenance windows</li>
+      <li><strong>How do I add a new service to monitoring?</strong> Open a Jira ticket or follow the monitoring-onboarding guide</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Cloud Operations | For internal use only</p>
+  </footer>
+
 </body>
 </html>
-
